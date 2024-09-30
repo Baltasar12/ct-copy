@@ -1,0 +1,1341 @@
+.
+├── README.md
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── Services
+│   │   ├── core
+│   │   │   ├── keyGenerator.ts
+│   │   │   ├── nextjs-api-handler.ts
+│   │   │   └── utils.ts
+│   │   ├── index.ts
+│   │   └── tiendanube
+│   │       ├── _shared
+│   │       │   ├── api.types.ts
+│   │       │   └── index.ts
+│   │       ├── apiService.ts
+│   │       ├── index.ts
+│   │       ├── key.ts
+│   │       ├── products
+│   │       │   ├── api.types.ts
+│   │       │   ├── index.ts
+│   │       │   ├── product.service.ts
+│   │       │   └── query.types.ts
+│   │       └── tiendanube.service.ts
+│   ├── __server__
+│   │   ├── __db__
+│   │   │   ├── address
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── dashboard
+│   │   │   │   ├── brand.ts
+│   │   │   │   ├── categories.ts
+│   │   │   │   ├── customers.ts
+│   │   │   │   ├── data.ts
+│   │   │   │   ├── earning-history.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── orders.ts
+│   │   │   │   ├── package-payments.ts
+│   │   │   │   ├── payout-requests.ts
+│   │   │   │   ├── payouts.ts
+│   │   │   │   ├── products.ts
+│   │   │   │   ├── refundRequests.ts
+│   │   │   │   ├── reviews.ts
+│   │   │   │   └── sellers.ts
+│   │   │   ├── fashion-1
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── fashion-2
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── fashion-3
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── furniture-1
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── furniture-2
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── furniture-3
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── gadget-1
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── gadget-2
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── gadget-3
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── gift
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── grocery-1
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── grocery-2
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── grocery-3
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── grocery-4
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── health-beauty
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── market-1
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── market-2
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── medical
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── orders
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── products
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── related-products
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── sales
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── shop
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── ticket
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── users
+│   │   │   │   ├── data.ts
+│   │   │   │   └── index.ts
+│   │   │   └── vendor
+│   │   │       ├── data.ts
+│   │   │       └── index.ts
+│   │   └── index.ts
+│   ├── app
+│   │   ├── (admin-dashboard)
+│   │   │   ├── admin
+│   │   │   │   ├── brands
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── create
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── categories
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── create
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── customers
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── earning-history
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── orders
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── package-payments
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── payout-requests
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── payouts
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── products
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── create
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── page.tsx
+│   │   │   │   │   └── reviews
+│   │   │   │   │       └── page.tsx
+│   │   │   │   ├── refund-request
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── refund-setting
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── seller-package
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── sellers
+│   │   │   │       └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── vendor
+│   │   │       ├── account-settings
+│   │   │       │   └── page.tsx
+│   │   │       ├── dashboard
+│   │   │       │   └── page.tsx
+│   │   │       ├── earning-history
+│   │   │       │   └── page.tsx
+│   │   │       ├── payout-requests
+│   │   │       │   └── page.tsx
+│   │   │       ├── payout-settings
+│   │   │       │   └── page.tsx
+│   │   │       ├── payouts
+│   │   │       │   └── page.tsx
+│   │   │       ├── refund-request
+│   │   │       │   └── page.tsx
+│   │   │       ├── reviews
+│   │   │       │   └── page.tsx
+│   │   │       ├── shop-settings
+│   │   │       │   └── page.tsx
+│   │   │       ├── site-settings
+│   │   │       │   └── page.tsx
+│   │   │       └── support-tickets
+│   │   │           └── page.tsx
+│   │   ├── (auth)
+│   │   │   ├── layout.tsx
+│   │   │   ├── login
+│   │   │   │   └── page.tsx
+│   │   │   ├── register
+│   │   │   │   └── page.tsx
+│   │   │   └── reset-password
+│   │   │       └── page.tsx
+│   │   ├── (gadget-3)
+│   │   │   ├── categories
+│   │   │   │   └── [slug]
+│   │   │   │       └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── (layout-1)
+│   │   │   ├── (checkout)
+│   │   │   │   ├── cart
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── checkout
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── page-stepper.tsx
+│   │   │   │   ├── payment
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── stepper.tsx
+│   │   │   ├── (customer-dashboard)
+│   │   │   │   ├── address
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── orders
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── payment-methods
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── profile
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── support-tickets
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── wish-list
+│   │   │   │       └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── order-confirmation
+│   │   │   │   └── page.tsx
+│   │   │   ├── products
+│   │   │   │   ├── [slug]
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── search
+│   │   │   │       └── [slug]
+│   │   │   │           └── page.tsx
+│   │   │   └── shops
+│   │   │       ├── [slug]
+│   │   │       │   └── page.tsx
+│   │   │       └── page.tsx
+│   │   ├── (layout-2)
+│   │   │   ├── checkout-alternative
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx
+│   │   ├── (sales)
+│   │   │   ├── sales-1
+│   │   │   │   ├── layout.tsx
+│   │   │   │   └── page.tsx
+│   │   │   └── sales-2
+│   │   │       └── page.tsx
+│   │   ├── error.tsx
+│   │   ├── favicon.ico
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   └── not-found.tsx
+│   ├── components
+│   │   ├── BazaarCard.tsx
+│   │   ├── BazaarImage.tsx
+│   │   ├── BazaarMenu.tsx
+│   │   ├── BazaarSwitch.tsx
+│   │   ├── BazaarTextField.tsx
+│   │   ├── DropZone.tsx
+│   │   ├── HoverBox.tsx
+│   │   ├── LazyImage.tsx
+│   │   ├── SearchInput.tsx
+│   │   ├── SnackbarProvider.tsx
+│   │   ├── Typography.tsx
+│   │   ├── WhiteButton.tsx
+│   │   ├── accordion
+│   │   │   ├── accordion-header.tsx
+│   │   │   └── index.ts
+│   │   ├── carousel
+│   │   │   ├── carousel.tsx
+│   │   │   ├── components
+│   │   │   │   ├── carousel-arrows.tsx
+│   │   │   │   └── carousel-dots.tsx
+│   │   │   ├── index.ts
+│   │   │   └── styles
+│   │   │       └── index.ts
+│   │   ├── carousel-cards
+│   │   │   ├── carousel-card-1
+│   │   │   │   ├── carousel-card-1.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles.ts
+│   │   │   ├── carousel-card-2
+│   │   │   │   ├── carousel-card-2.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles.ts
+│   │   │   ├── carousel-card-3
+│   │   │   │   ├── carousel-card-3.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles.ts
+│   │   │   └── carousel-card-4
+│   │   │       ├── carousel-card-4.tsx
+│   │   │       ├── index.ts
+│   │   │       └── styles.ts
+│   │   ├── categories
+│   │   │   ├── category-list
+│   │   │   │   ├── category-list.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── styles.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── category-list-item
+│   │   │   │   ├── category-menu-item.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles.ts
+│   │   │   ├── category-menu.tsx
+│   │   │   ├── mega-menu
+│   │   │   │   ├── banner.tsx
+│   │   │   │   ├── column-list.tsx
+│   │   │   │   ├── mega-menu-1.tsx
+│   │   │   │   ├── mega-menu-2.tsx
+│   │   │   │   └── styles.ts
+│   │   │   └── types.ts
+│   │   ├── category-cards
+│   │   │   └── category-card-1
+│   │   │       ├── category-card-1.tsx
+│   │   │       ├── index.ts
+│   │   │       └── styles.ts
+│   │   ├── countdown
+│   │   │   ├── count-box.tsx
+│   │   │   ├── count-down.tsx
+│   │   │   ├── index.tsx
+│   │   │   └── useCountDown.ts
+│   │   ├── data-table
+│   │   │   ├── index.ts
+│   │   │   ├── table-header.tsx
+│   │   │   └── table-pagination.tsx
+│   │   ├── flex-box
+│   │   │   ├── flex-between.tsx
+│   │   │   ├── flex-box.tsx
+│   │   │   ├── flex-row-center.tsx
+│   │   │   └── index.ts
+│   │   ├── footer
+│   │   │   ├── components
+│   │   │   │   ├── about-links.tsx
+│   │   │   │   ├── app-store.tsx
+│   │   │   │   ├── customer-care-links.tsx
+│   │   │   │   ├── logo.tsx
+│   │   │   │   └── social-links.tsx
+│   │   │   ├── data
+│   │   │   │   └── index.ts
+│   │   │   ├── footer-1.tsx
+│   │   │   ├── footer-2.tsx
+│   │   │   ├── footer-3.tsx
+│   │   │   ├── footer-4.tsx
+│   │   │   ├── index.ts
+│   │   │   └── styles
+│   │   │       └── index.ts
+│   │   ├── header
+│   │   │   ├── components
+│   │   │   │   ├── categories-menu.tsx
+│   │   │   │   ├── dialog-drawer.tsx
+│   │   │   │   ├── login-cart-buttons.tsx
+│   │   │   │   └── mobile-header.tsx
+│   │   │   ├── header.tsx
+│   │   │   ├── hooks
+│   │   │   │   └── use-header.ts
+│   │   │   ├── index.ts
+│   │   │   └── styles
+│   │   │       └── index.ts
+│   │   ├── layouts
+│   │   │   ├── customer-dashboard
+│   │   │   │   ├── index.tsx
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── navigation.tsx
+│   │   │   │   └── styles.ts
+│   │   │   ├── layout-drawer.tsx
+│   │   │   ├── sales-layout
+│   │   │   │   ├── index.ts
+│   │   │   │   └── sales-layout.tsx
+│   │   │   ├── shop-layout-1
+│   │   │   │   ├── index.ts
+│   │   │   │   └── shop-layout-1.tsx
+│   │   │   ├── shop-layout-2
+│   │   │   │   ├── index.ts
+│   │   │   │   └── shop-layout-2.tsx
+│   │   │   ├── shop-layout-3
+│   │   │   │   ├── index.ts
+│   │   │   │   └── shop-layout-3.tsx
+│   │   │   ├── shop-layout-4
+│   │   │   │   ├── footer
+│   │   │   │   │   ├── footer.tsx
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── styles.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── shop-layout-4.tsx
+│   │   │   └── vendor-dashboard
+│   │   │       ├── dashboard-body-wrapper.tsx
+│   │   │       ├── dashboard-layout-context.tsx
+│   │   │       ├── dashboard-layout.tsx
+│   │   │       ├── dashboard-navbar
+│   │   │       │   ├── account-popover.tsx
+│   │   │       │   ├── dashboard-navbar.tsx
+│   │   │       │   ├── left-content.tsx
+│   │   │       │   ├── notification-popover.tsx
+│   │   │       │   ├── right-content.tsx
+│   │   │       │   └── styles.ts
+│   │   │       ├── dashboard-navigation.ts
+│   │   │       ├── dashboard-sidebar
+│   │   │       │   ├── dashboard-sidebar.tsx
+│   │   │       │   ├── logo-area.tsx
+│   │   │       │   ├── multi-level-menu.tsx
+│   │   │       │   ├── sidebar-accordion.tsx
+│   │   │       │   └── styles.ts
+│   │   │       └── index.ts
+│   │   ├── mini-cart
+│   │   │   ├── components
+│   │   │   │   ├── bottom-actions.tsx
+│   │   │   │   ├── cart-item.tsx
+│   │   │   │   ├── empty-view.tsx
+│   │   │   │   └── top-header.tsx
+│   │   │   ├── index.ts
+│   │   │   └── mini-cart.tsx
+│   │   ├── mobile-navigation
+│   │   │   ├── index.ts
+│   │   │   ├── mobile-navigation-bar-2.tsx
+│   │   │   ├── mobile-navigation-bar.tsx
+│   │   │   └── styles
+│   │   │       └── index.ts
+│   │   ├── nav-link
+│   │   │   ├── index.ts
+│   │   │   ├── nav-link-2.tsx
+│   │   │   ├── nav-link-3.tsx
+│   │   │   └── nav-link.tsx
+│   │   ├── navbar
+│   │   │   ├── categories.tsx
+│   │   │   ├── category-based-menu
+│   │   │   │   ├── category-based-menu.tsx
+│   │   │   │   ├── components
+│   │   │   │   │   ├── categories.tsx
+│   │   │   │   │   ├── category-item.tsx
+│   │   │   │   │   └── child-categories.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── styles.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── index.ts
+│   │   │   ├── mega-menu
+│   │   │   │   ├── category-list.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── mega-menu.tsx
+│   │   │   │   ├── styles.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── mobile-menu
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── mobile-menu.tsx
+│   │   │   │   ├── modified-navigation.ts
+│   │   │   │   └── render-levels.tsx
+│   │   │   ├── nav-list
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── nav-item-child.tsx
+│   │   │   │   └── nav-list.tsx
+│   │   │   ├── navbar.tsx
+│   │   │   ├── styles.ts
+│   │   │   └── types.ts
+│   │   ├── newsletter
+│   │   │   ├── index.ts
+│   │   │   ├── newsletter.tsx
+│   │   │   ├── social-icons.tsx
+│   │   │   └── styles.ts
+│   │   ├── page-sidenav
+│   │   │   ├── grocery-side-nav
+│   │   │   │   ├── components
+│   │   │   │   │   ├── link-item.tsx
+│   │   │   │   │   ├── list-item.tsx
+│   │   │   │   │   ├── nav-accordion.tsx
+│   │   │   │   │   └── render-child.tsx
+│   │   │   │   ├── grocery-side-nav.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── health-beauty-side-nav
+│   │   │   │   ├── components
+│   │   │   │   │   ├── list-item.tsx
+│   │   │   │   │   ├── nav-accordion.tsx
+│   │   │   │   │   └── render-child.tsx
+│   │   │   │   ├── health-beauty-side-nav.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── side-navbar
+│   │   │   │   ├── components
+│   │   │   │   │   ├── list-item.tsx
+│   │   │   │   │   ├── nav-accordion.tsx
+│   │   │   │   │   └── render-child.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── side-nav-bar.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   └── side-navbar-2
+│   │   │       ├── components
+│   │   │       │   ├── button-content.tsx
+│   │   │       │   └── sidebar-accordion.tsx
+│   │   │       ├── index.ts
+│   │   │       ├── side-navbar-2.tsx
+│   │   │       └── styles
+│   │   │           └── index.ts
+│   │   ├── product-cards
+│   │   │   ├── discount-chip.tsx
+│   │   │   ├── product-card-1
+│   │   │   │   ├── components
+│   │   │   │   │   ├── hover-actions.tsx
+│   │   │   │   │   └── quantity-buttons.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-10
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-11
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-12
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-13
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-14
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-15
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-16
+│   │   │   │   ├── components
+│   │   │   │   │   └── quantity-buttons.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-2
+│   │   │   │   ├── components
+│   │   │   │   │   ├── favorite-button.tsx
+│   │   │   │   │   └── product-price.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── product-card.tsx
+│   │   │   ├── product-card-3
+│   │   │   │   ├── components
+│   │   │   │   │   └── hover-actions.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-4
+│   │   │   │   ├── components
+│   │   │   │   │   └── hover-actions.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-5
+│   │   │   │   ├── components
+│   │   │   │   │   ├── button-actions.tsx
+│   │   │   │   │   └── hover-actions.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-6
+│   │   │   │   ├── components
+│   │   │   │   │   └── hover-actions.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-7
+│   │   │   │   ├── components
+│   │   │   │   │   ├── product-status.tsx
+│   │   │   │   │   └── quantity-buttons.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-8
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-card.tsx
+│   │   │   │   └── styles
+│   │   │   │       └── index.ts
+│   │   │   ├── product-card-9
+│   │   │   │   ├── components
+│   │   │   │   │   ├── add-to-cart.tsx
+│   │   │   │   │   ├── favorite-button.tsx
+│   │   │   │   │   └── tags.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── product-card.tsx
+│   │   │   ├── product-price.tsx
+│   │   │   ├── product-rating.tsx
+│   │   │   ├── product-title.tsx
+│   │   │   └── use-product.ts
+│   │   ├── products-view
+│   │   │   ├── product-view-dialog.tsx
+│   │   │   ├── products-grid-view.tsx
+│   │   │   └── products-list-view.tsx
+│   │   ├── progress
+│   │   │   ├── index.ts
+│   │   │   └── progress.tsx
+│   │   ├── rtl
+│   │   │   ├── RTL.tsx
+│   │   │   └── index.ts
+│   │   ├── scrollbar
+│   │   │   ├── index.ts
+│   │   │   ├── scrollbar.tsx
+│   │   │   └── styles.ts
+│   │   ├── search-box
+│   │   │   ├── categories.ts
+│   │   │   ├── components
+│   │   │   │   ├── category-dropdown.tsx
+│   │   │   │   └── search-result.tsx
+│   │   │   ├── hooks
+│   │   │   │   └── use-search.ts
+│   │   │   ├── index.ts
+│   │   │   ├── search-input-category.tsx
+│   │   │   ├── search-input.tsx
+│   │   │   └── styles
+│   │   │       └── index.ts
+│   │   ├── section-header
+│   │   │   ├── index.ts
+│   │   │   ├── section-creator.tsx
+│   │   │   └── section-header.tsx
+│   │   ├── service-cards
+│   │   │   ├── icon-component.tsx
+│   │   │   ├── service-card-1
+│   │   │   │   ├── index.ts
+│   │   │   │   └── service-card-1.tsx
+│   │   │   ├── service-card-2
+│   │   │   │   ├── index.ts
+│   │   │   │   └── service-card-2.tsx
+│   │   │   └── service-card-3
+│   │   │       ├── index.ts
+│   │   │       ├── service-card-3.tsx
+│   │   │       └── styles.ts
+│   │   ├── settings
+│   │   │   ├── index.ts
+│   │   │   ├── setting.tsx
+│   │   │   └── styles.ts
+│   │   ├── side-nav
+│   │   │   ├── index.ts
+│   │   │   └── side-nav.tsx
+│   │   ├── sticky
+│   │   │   ├── Sticky.tsx
+│   │   │   ├── index.ts
+│   │   │   └── styles.ts
+│   │   ├── sticky-wrapper
+│   │   │   ├── index.ts
+│   │   │   ├── sticky-wrapper.tsx
+│   │   │   └── styles.ts
+│   │   ├── stories
+│   │   │   ├── story-content
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── story-content.tsx
+│   │   │   │   └── styles.ts
+│   │   │   ├── story-item
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── story-item.tsx
+│   │   │   │   └── styles.ts
+│   │   │   └── story-viewer
+│   │   │       ├── index.ts
+│   │   │       ├── story-viewer.tsx
+│   │   │       └── styles.ts
+│   │   ├── subscribe-input
+│   │   │   ├── index.ts
+│   │   │   ├── styles.ts
+│   │   │   └── subscribe-input.tsx
+│   │   └── topbar
+│   │       ├── index.ts
+│   │       ├── styles.ts
+│   │       └── top-bar.tsx
+│   ├── contexts
+│   │   ├── CartContext.tsx
+│   │   ├── SettingContext.tsx
+│   │   └── react-query.tsx
+│   ├── data
+│   │   ├── bazaar-react-database.ts
+│   │   ├── categoriesMegaMenu.ts
+│   │   ├── countryList.ts
+│   │   ├── groceryNavigations.ts
+│   │   ├── months-years.ts
+│   │   ├── navbarNavigation.ts
+│   │   ├── navigations.ts
+│   │   ├── product-database.ts
+│   │   └── product-variants.ts
+│   ├── hooks
+│   │   ├── useCart.ts
+│   │   ├── useCustomerAddresses.ts
+│   │   ├── useMuiTable.ts
+│   │   ├── useOverflowDetect.ts
+│   │   ├── usePaymentMethods.ts
+│   │   ├── useScroller.ts
+│   │   ├── useSettings.ts
+│   │   └── useWindowSize.ts
+│   ├── i18n
+│   │   ├── index.ts
+│   │   └── resource.ts
+│   ├── icons
+│   │   ├── AlarmClock.tsx
+│   │   ├── Apple.tsx
+│   │   ├── AppleStore.tsx
+│   │   ├── BabyBoy.tsx
+│   │   ├── BabyFeeder.tsx
+│   │   ├── BabyGirl.tsx
+│   │   ├── BasketBall.tsx
+│   │   ├── BeautyProducts.tsx
+│   │   ├── Beer.tsx
+│   │   ├── Bottle.tsx
+│   │   ├── Breakfast.tsx
+│   │   ├── Camera.tsx
+│   │   ├── Car.tsx
+│   │   ├── Carrot.tsx
+│   │   ├── Cart.tsx
+│   │   ├── CartBag.tsx
+│   │   ├── CartCheck.tsx
+│   │   ├── CartX.tsx
+│   │   ├── Category.tsx
+│   │   ├── CategoryOutline.tsx
+│   │   ├── CreditCardVerified.tsx
+│   │   ├── CustomerService.tsx
+│   │   ├── Delivery.tsx
+│   │   ├── DeliveryBox.tsx
+│   │   ├── DottedStar.tsx
+│   │   ├── Dress.tsx
+│   │   ├── DrillMachine.tsx
+│   │   ├── Eye.tsx
+│   │   ├── Facebook.tsx
+│   │   ├── FacebookFilled.tsx
+│   │   ├── FeedbackThumbsUp.tsx
+│   │   ├── Figma.tsx
+│   │   ├── Food.tsx
+│   │   ├── FormalCloth.tsx
+│   │   ├── Gift.tsx
+│   │   ├── GiftBox.tsx
+│   │   ├── Globe.tsx
+│   │   ├── GoldPackageIcon.tsx
+│   │   ├── Google.tsx
+│   │   ├── Heart.tsx
+│   │   ├── Home.tsx
+│   │   ├── Honey.tsx
+│   │   ├── Instagram.tsx
+│   │   ├── InstagramFilled.tsx
+│   │   ├── Laptop.tsx
+│   │   ├── Light.tsx
+│   │   ├── Lightning.tsx
+│   │   ├── MakeUp.tsx
+│   │   ├── Man.tsx
+│   │   ├── Microphone.tsx
+│   │   ├── Milk.tsx
+│   │   ├── MoneyGurantee.tsx
+│   │   ├── MotorBike.tsx
+│   │   ├── NewArrival.tsx
+│   │   ├── OnlineService.tsx
+│   │   ├── OnlineSupport.tsx
+│   │   ├── PackageBox.tsx
+│   │   ├── Pages.tsx
+│   │   ├── Pant.tsx
+│   │   ├── Payment.tsx
+│   │   ├── Pen.tsx
+│   │   ├── Pets.tsx
+│   │   ├── PickUpBox.tsx
+│   │   ├── Picture.tsx
+│   │   ├── PlantPot.tsx
+│   │   ├── PlayStore.tsx
+│   │   ├── PremiumPackageIcon.tsx
+│   │   ├── Preview.tsx
+│   │   ├── Quote.tsx
+│   │   ├── RankBadge.tsx
+│   │   ├── Reload.tsx
+│   │   ├── Search.tsx
+│   │   ├── Shield.tsx
+│   │   ├── Shirt.tsx
+│   │   ├── ShoppingBagOutlined.tsx
+│   │   ├── SilverPackageIcon.tsx
+│   │   ├── Skirt.tsx
+│   │   ├── Snack.tsx
+│   │   ├── Sofa.tsx
+│   │   ├── StarEmpty.tsx
+│   │   ├── StarFilled.tsx
+│   │   ├── TeddyBear.tsx
+│   │   ├── Telegram.tsx
+│   │   ├── Toggle.tsx
+│   │   ├── Tops.tsx
+│   │   ├── Truck.tsx
+│   │   ├── TruckFast.tsx
+│   │   ├── TruckFilled.tsx
+│   │   ├── Tshirt.tsx
+│   │   ├── Twitter.tsx
+│   │   ├── TwitterFilled.tsx
+│   │   ├── UpDown.tsx
+│   │   ├── User.tsx
+│   │   ├── User2.tsx
+│   │   ├── Verify.tsx
+│   │   ├── Vest.tsx
+│   │   ├── Watch.tsx
+│   │   ├── Wheel.tsx
+│   │   ├── Woman.tsx
+│   │   ├── WomenDress.tsx
+│   │   ├── Yogurt.tsx
+│   │   ├── Youtube.tsx
+│   │   ├── YoutubeFilled.tsx
+│   │   ├── duotone
+│   │   │   ├── AccountSetting.tsx
+│   │   │   ├── Accounts.tsx
+│   │   │   ├── AdminEcommerce.tsx
+│   │   │   ├── Apps.tsx
+│   │   │   ├── Calender.tsx
+│   │   │   ├── Chat.tsx
+│   │   │   ├── Customers.tsx
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── DataTable.tsx
+│   │   │   ├── Ecommerce.tsx
+│   │   │   ├── ElementHub.tsx
+│   │   │   ├── Invoice.tsx
+│   │   │   ├── Logout.tsx
+│   │   │   ├── Order.tsx
+│   │   │   ├── Pages.tsx
+│   │   │   ├── Pricing.tsx
+│   │   │   ├── Products.tsx
+│   │   │   ├── ProjectChart.tsx
+│   │   │   ├── Refund.tsx
+│   │   │   ├── Review.tsx
+│   │   │   ├── Seller.tsx
+│   │   │   ├── Session.tsx
+│   │   │   ├── Settings.tsx
+│   │   │   ├── Shirt.tsx
+│   │   │   ├── Shoe.tsx
+│   │   │   ├── SiteSetting.tsx
+│   │   │   ├── TodoList.tsx
+│   │   │   ├── UserProfile.tsx
+│   │   │   ├── UserTie.tsx
+│   │   │   ├── Vest.tsx
+│   │   │   └── index.ts
+│   │   ├── furniture-shop
+│   │   │   ├── Chair.tsx
+│   │   │   ├── Decoration.tsx
+│   │   │   ├── Dining.tsx
+│   │   │   ├── Furniture.tsx
+│   │   │   ├── Home.tsx
+│   │   │   ├── Interior.tsx
+│   │   │   ├── Living.tsx
+│   │   │   ├── Popular.tsx
+│   │   │   ├── Products.tsx
+│   │   │   ├── RoomSet.tsx
+│   │   │   ├── RoundTable.tsx
+│   │   │   ├── Sofa.tsx
+│   │   │   ├── Stool.tsx
+│   │   │   ├── Trending.tsx
+│   │   │   └── Wardrobe.tsx
+│   │   ├── gift-shop
+│   │   │   ├── BabyToys.tsx
+│   │   │   ├── BirthdayCake.tsx
+│   │   │   ├── Children.tsx
+│   │   │   ├── Christmas.tsx
+│   │   │   ├── Flower.tsx
+│   │   │   ├── Football.tsx
+│   │   │   ├── NewYearGift.tsx
+│   │   │   ├── Robot.tsx
+│   │   │   ├── TeddyBear.tsx
+│   │   │   ├── Toys.tsx
+│   │   │   ├── ValentineGift.tsx
+│   │   │   └── WeddingGift.tsx
+│   │   ├── grocery-4
+│   │   │   ├── Bakery.tsx
+│   │   │   ├── Beauty.tsx
+│   │   │   ├── Coupon.tsx
+│   │   │   ├── Electronics.tsx
+│   │   │   ├── Fashion.tsx
+│   │   │   ├── Furniture.tsx
+│   │   │   ├── Grocery.tsx
+│   │   │   ├── Help.tsx
+│   │   │   ├── Offer.tsx
+│   │   │   └── index.ts
+│   │   ├── health-and-beauty
+│   │   │   ├── Automotive.tsx
+│   │   │   ├── FaceMask.tsx
+│   │   │   ├── HealthBeauty.tsx
+│   │   │   ├── LenseCase.tsx
+│   │   │   ├── Lipstick.tsx
+│   │   │   ├── Lotion.tsx
+│   │   │   ├── Mascara.tsx
+│   │   │   ├── OxygenPump.tsx
+│   │   │   ├── Powder.tsx
+│   │   │   └── Thermometer.tsx
+│   │   └── index.ts
+│   ├── lib
+│   │   └── index.ts
+│   ├── models
+│   │   ├── Address.model.ts
+│   │   ├── Blog.model.ts
+│   │   ├── Brand.model.ts
+│   │   ├── Carousel.model.ts
+│   │   ├── Category.model.ts
+│   │   ├── CategoryNavList.model.ts
+│   │   ├── Common.ts
+│   │   ├── Gadget.model.ts
+│   │   ├── Grocery-2.model.ts
+│   │   ├── Grocery-3.model.ts
+│   │   ├── Market-1.model.ts
+│   │   ├── Market-2.model.ts
+│   │   ├── Order.model.ts
+│   │   ├── PaymentMethod.model.ts
+│   │   ├── Product.model.ts
+│   │   ├── Review.model.ts
+│   │   ├── Service.model.ts
+│   │   ├── Shop.model.ts
+│   │   ├── Story.model.ts
+│   │   ├── Ticket.model.ts
+│   │   └── User.model.ts
+│   ├── pages
+│   │   └── api
+│   │       ├── payway.ts
+│   │       └── tiendanube
+│   │           └── products
+│   │               ├── get-product-by-id.ts
+│   │               ├── get-product-by-sku.ts
+│   │               └── get-products.ts
+│   ├── pages-sections
+│   │   ├── cart
+│   │   │   ├── cart-item.tsx
+│   │   │   ├── checkout-form.tsx
+│   │   │   ├── page-view
+│   │   │   │   ├── cart.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── styles.ts
+│   │   ├── checkout
+│   │   │   ├── checkout-alt-form
+│   │   │   │   ├── _types.ts
+│   │   │   │   ├── checkout-form.tsx
+│   │   │   │   ├── delivery-address.tsx
+│   │   │   │   ├── delivery-date.tsx
+│   │   │   │   ├── edit-address-form.tsx
+│   │   │   │   ├── heading.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── new-address-form.tsx
+│   │   │   │   └── payment-details.tsx
+│   │   │   ├── checkout-alt-summery
+│   │   │   │   ├── cart-item.tsx
+│   │   │   │   ├── checkout-alt-summery.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── checkout-form
+│   │   │   │   ├── billing-address-form.tsx
+│   │   │   │   ├── checkout-form.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── shipping-form.tsx
+│   │   │   ├── checkout-summery
+│   │   │   │   ├── checkout-summery.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── list-item.tsx
+│   │   │   └── page-view
+│   │   │       ├── checkout-alternative.tsx
+│   │   │       ├── checkout.tsx
+│   │   │       └── index.ts
+│   │   ├── customer-dashboard
+│   │   │   ├── address
+│   │   │   │   ├── address-form.tsx
+│   │   │   │   ├── address-item.tsx
+│   │   │   │   └── page-view
+│   │   │   │       ├── address-details.tsx
+│   │   │   │       ├── address.tsx
+│   │   │   │       └── index.ts
+│   │   │   ├── dashboard-header.tsx
+│   │   │   ├── orders
+│   │   │   │   ├── order-progress.tsx
+│   │   │   │   ├── order-row.tsx
+│   │   │   │   ├── order-summery.tsx
+│   │   │   │   ├── ordered-products.tsx
+│   │   │   │   └── page-view
+│   │   │   │       ├── index.ts
+│   │   │   │       ├── order-details.tsx
+│   │   │   │       └── orders.tsx
+│   │   │   ├── pagination.tsx
+│   │   │   ├── payment-methods
+│   │   │   │   ├── list-card.tsx
+│   │   │   │   ├── page-view
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── payment-details.tsx
+│   │   │   │   │   └── payment-methods.tsx
+│   │   │   │   └── payment-form.tsx
+│   │   │   ├── profile
+│   │   │   │   ├── edit-form.tsx
+│   │   │   │   ├── page-view
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── profile-edit.tsx
+│   │   │   │   │   └── profile.tsx
+│   │   │   │   ├── profile-pic-upload.tsx
+│   │   │   │   ├── user-analytics.tsx
+│   │   │   │   └── user-info.tsx
+│   │   │   ├── support-tickets
+│   │   │   │   ├── conversation-card.tsx
+│   │   │   │   ├── message-form.tsx
+│   │   │   │   ├── page-view
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── support-tickets.tsx
+│   │   │   │   │   └── ticket-details.tsx
+│   │   │   │   └── ticket-card.tsx
+│   │   │   ├── table-row.tsx
+│   │   │   └── wish-list
+│   │   │       ├── index.ts
+│   │   │       ├── use-wish-list.ts
+│   │   │       └── wish-list.tsx
+│   │   ├── gadget-3
+│   │   │   ├── page-view
+│   │   │   │   ├── categories.tsx
+│   │   │   │   ├── gadget-3.tsx
+│   │   │   │   ├── gadget-3_tiendanube-csr.tsx
+│   │   │   │   ├── gadget-3_tiendanube-ssr.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── section-1
+│   │   │   │   ├── index.ts
+│   │   │   │   └── section-1.tsx
+│   │   │   └── section-2
+│   │   │       ├── index.ts
+│   │   │       └── section-2.tsx
+│   │   ├── not-found
+│   │   │   ├── index.ts
+│   │   │   └── not-found.tsx
+│   │   ├── order-confirmation
+│   │   │   ├── index.ts
+│   │   │   └── page-view.tsx
+│   │   ├── payment
+│   │   │   ├── credit-card-form.tsx
+│   │   │   ├── form-label.tsx
+│   │   │   ├── page-view
+│   │   │   │   ├── index.ts
+│   │   │   │   └── payment.tsx
+│   │   │   ├── payment-form.tsx
+│   │   │   ├── payment-item.tsx
+│   │   │   └── payment-summery.tsx
+│   │   ├── product-details
+│   │   │   ├── available-shops.tsx
+│   │   │   ├── checkbox-label.tsx
+│   │   │   ├── frequently-bought.tsx
+│   │   │   ├── frequently-product-card.tsx
+│   │   │   ├── page-view
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── product-details.tsx
+│   │   │   │   └── product-search.tsx
+│   │   │   ├── product-comment.tsx
+│   │   │   ├── product-description.tsx
+│   │   │   ├── product-filter-card.tsx
+│   │   │   ├── product-intro.tsx
+│   │   │   ├── product-review.tsx
+│   │   │   ├── product-tabs.tsx
+│   │   │   ├── related-products.tsx
+│   │   │   └── types.ts
+│   │   ├── sales
+│   │   │   ├── category-list.tsx
+│   │   │   ├── page-view
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── sales-1.tsx
+│   │   │   │   └── sales-2.tsx
+│   │   │   ├── product-list.tsx
+│   │   │   ├── product-pagination.tsx
+│   │   │   ├── sales-navbar.tsx
+│   │   │   ├── styles.ts
+│   │   │   └── use-sales.ts
+│   │   ├── sessions
+│   │   │   ├── components
+│   │   │   │   ├── box-link.tsx
+│   │   │   │   ├── eye-toggle-button.tsx
+│   │   │   │   ├── login-bottom.tsx
+│   │   │   │   ├── logo-title.tsx
+│   │   │   │   └── social-buttons.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── page-view
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── login.tsx
+│   │   │   │   ├── register.tsx
+│   │   │   │   └── reset-password.tsx
+│   │   │   ├── styles
+│   │   │   │   └── index.ts
+│   │   │   └── use-password-visible.ts
+│   │   ├── shops
+│   │   │   ├── page-view
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── shop-details.tsx
+│   │   │   │   └── shops.tsx
+│   │   │   ├── shop-card
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── shop-card.tsx
+│   │   │   │   └── styles.ts
+│   │   │   └── shop-intro-card
+│   │   │       ├── index.ts
+│   │   │       └── shop-intro-card.tsx
+│   │   └── vendor-dashboard
+│   │       ├── account-settings
+│   │       │   ├── cover-pic-section.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── account-settings.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── upload-button.tsx
+│   │       ├── brands
+│   │       │   ├── brand-form.tsx
+│   │       │   ├── brand-row.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── brand-create.tsx
+│   │       │   │   ├── brand-edit.tsx
+│   │       │   │   ├── brands.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── table-heading.ts
+│   │       ├── categories
+│   │       │   ├── category-form.tsx
+│   │       │   ├── category-row.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── categories.tsx
+│   │       │   │   ├── category-edit.tsx
+│   │       │   │   ├── create-category.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── table-heading.ts
+│   │       ├── customers
+│   │       │   ├── customer-row.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── customers.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── table-heading.ts
+│   │       ├── dashboard
+│   │       │   ├── analytics.tsx
+│   │       │   ├── apex-chart.tsx
+│   │       │   ├── card-1.tsx
+│   │       │   ├── card-2.tsx
+│   │       │   ├── chart-options.ts
+│   │       │   ├── page-view
+│   │       │   │   ├── dashboard.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── recent-purchase.tsx
+│   │       │   ├── sales.tsx
+│   │       │   ├── stock-out-products.tsx
+│   │       │   ├── table
+│   │       │   │   ├── index.tsx
+│   │       │   │   └── table-head.tsx
+│   │       │   ├── types.ts
+│   │       │   └── welcome-card.tsx
+│   │       ├── earning-history
+│   │       │   ├── history-row.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── earning-history.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── orders
+│   │       │   ├── order-actions.tsx
+│   │       │   ├── order-row.tsx
+│   │       │   ├── ordered-product.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   ├── order-details.tsx
+│   │       │   │   └── orders.tsx
+│   │       │   ├── shipping-address.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── total-summery.tsx
+│   │       ├── package-payments
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── package-payment.tsx
+│   │       │   ├── payment-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── page-wrapper.tsx
+│   │       ├── payout-requests
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── payout-requests.tsx
+│   │       │   ├── request-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── payout-settings
+│   │       │   ├── bank-payment.tsx
+│   │       │   ├── card-payment.tsx
+│   │       │   ├── cash-payment.tsx
+│   │       │   └── page-view
+│   │       │       ├── index.ts
+│   │       │       └── payout-settings.tsx
+│   │       ├── payouts
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── payouts.tsx
+│   │       │   ├── payout-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── products
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   ├── product-create.tsx
+│   │       │   │   ├── product-edit.tsx
+│   │       │   │   ├── product-reviews.tsx
+│   │       │   │   └── products.tsx
+│   │       │   ├── product-form.tsx
+│   │       │   ├── product-row.tsx
+│   │       │   └── review-row.tsx
+│   │       ├── refund-request
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── refund-request.tsx
+│   │       │   ├── refund-request-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── refund-setting
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── refund-setting.tsx
+│   │       │   └── reason-type.tsx
+│   │       ├── reviews
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── reviews.tsx
+│   │       │   ├── review-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── search-box.tsx
+│   │       ├── seller-package
+│   │       │   ├── package-card.tsx
+│   │       │   ├── packages.ts
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── seller-package.tsx
+│   │       │   └── types.ts
+│   │       ├── sellers
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── sellers.tsx
+│   │       │   ├── seller-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       ├── shop-settings
+│   │       │   ├── page-settings.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── shop-settings.tsx
+│   │       │   └── settings-form.tsx
+│   │       ├── site-settings
+│   │       │   ├── banner-slider.tsx
+│   │       │   ├── footer-form.tsx
+│   │       │   ├── general-form.tsx
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── site-settings.tsx
+│   │       │   ├── shipping-vat-form.tsx
+│   │       │   ├── social-links-form.tsx
+│   │       │   └── topbar-form.tsx
+│   │       ├── styles.ts
+│   │       ├── support-tickets
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── support-tickets.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── ticket-row.tsx
+│   │       ├── v-earning-history
+│   │       │   ├── page-view
+│   │       │   │   ├── earning-history.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── table-heading.ts
+│   │       │   ├── type.ts
+│   │       │   └── v-earning-row.tsx
+│   │       ├── v-payout-request
+│   │       │   ├── page-view
+│   │       │   │   ├── index.ts
+│   │       │   │   └── payout-request.tsx
+│   │       │   ├── request-row.tsx
+│   │       │   ├── table-heading.ts
+│   │       │   └── types.ts
+│   │       └── v-payouts
+│   │           ├── page-view
+│   │           │   ├── index.ts
+│   │           │   └── payouts.tsx
+│   │           ├── payout-row.tsx
+│   │           ├── table-heading.ts
+│   │           └── types.ts
+│   ├── theme
+│   │   ├── components.ts
+│   │   ├── emotion-cache.tsx
+│   │   ├── theme-colors.ts
+│   │   ├── theme-options-sample.ts
+│   │   ├── theme-options.ts
+│   │   ├── theme-provider.tsx
+│   │   ├── typography.ts
+│   │   └── utils.ts
+│   └── utils
+│       ├── __api__
+│       │   ├── address.ts
+│       │   ├── dashboard.ts
+│       │   ├── fashion-1.ts
+│       │   ├── fashion-2.ts
+│       │   ├── fashion-3.ts
+│       │   ├── furniture-1.ts
+│       │   ├── furniture-2.ts
+│       │   ├── furniture-3.ts
+│       │   ├── gadget-1.ts
+│       │   ├── gadget-2.ts
+│       │   ├── gadget-3.ts
+│       │   ├── gift-shop.ts
+│       │   ├── grocery-1.ts
+│       │   ├── grocery-2.ts
+│       │   ├── grocery-3.ts
+│       │   ├── grocery-4.ts
+│       │   ├── healthbeauty-shop.ts
+│       │   ├── market-1.ts
+│       │   ├── market-2.ts
+│       │   ├── medical.ts
+│       │   ├── orders.ts
+│       │   ├── paywayApi.ts
+│       │   ├── products.ts
+│       │   ├── related-products.ts
+│       │   ├── sales.ts
+│       │   ├── shop.ts
+│       │   ├── ticket.ts
+│       │   ├── users.ts
+│       │   ├── vendor.ts
+│       │   └── wish-list.ts
+│       ├── axiosInstance.ts
+│       └── constants.ts
+├── tree.txt
+└── tsconfig.json
+
+343 directories, 996 files
